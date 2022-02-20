@@ -16,7 +16,7 @@ const thoughtController = {
         Thought.findone({_id: params.thoughtId })
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                res.status(404).json({ message: 'No thoughts found with this id'});
+                res.status(404).json({ message: 'No thoughts found'});
                 return; 
             }
             res.json(dbThoughtData);
@@ -40,7 +40,7 @@ const thoughtController = {
             })
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: 'No user found with this id'}); 
+                    res.status(404).json({ message: 'No user found'}); 
                     return; 
                 }
                 res.json(dbUserData); 
@@ -53,7 +53,7 @@ const thoughtController = {
         Thought.findOneAndUpdate({ _id: params.thoughtId }, body, { new: true, runValidators: true })
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                res.status(404).json({ message: 'No thought found with id' }); 
+                res.status(404).json({ message: 'No thoughts found' }); 
                 return;
             }
             res.json(dbTHoughtData); 
@@ -66,7 +66,7 @@ const thoughtController = {
         Thought.findOneAndDelete({ _id: params.thoughtId })
         .then(deleteThought => {
             if (!deleteThought) {
-                return res.status(404).json({ message: 'No thought found with this id' });
+                return res.status(404).json({ message: 'No thoughts found' });
             }
             return User.findOneAndUpdate(
                 { _id: params.userId },
@@ -76,7 +76,7 @@ const thoughtController = {
         })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id' }); 
+                res.status(404).json({ message: 'No user found' }); 
                 return; 
             }
             res.json(dbUserData); 
@@ -93,7 +93,7 @@ const thoughtController = {
         )
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                return res.status(404).json({ message: 'No thought found with this id' });
+                return res.status(404).json({ message: 'No thoughts found' });
             }
             res.json(dbThoughtData); 
         })
