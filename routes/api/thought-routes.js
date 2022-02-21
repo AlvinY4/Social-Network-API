@@ -12,7 +12,7 @@ const { route } = require('./user-routes');
 
 router.route('/').get(getAllThoughts);
 
-router.route('/userId').post(addThought); 
+router.route('/:userId').post(addThought); 
 
 router
     .route('/:thoughtId')
