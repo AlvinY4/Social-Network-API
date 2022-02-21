@@ -21,7 +21,7 @@ SO THAT my website can handle large amounts of unstructured data
 
 ## Screenshot
 
-<img src=> 
+<img src=https://github.com/AlvinY4/Social-Network-API/blob/main/assets/Screenshot/Screen%20Shot%202022-02-20%20at%2010.35.00%20PM.png> 
 
 ## Walkthrough Videos 
 
