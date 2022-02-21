@@ -20,7 +20,7 @@ const userController = {
         .select('-__v')
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'No user found' });
                 return;
             }
             res.json(dbUserData);
