@@ -17,7 +17,7 @@ SO THAT my website can handle large amounts of unstructured data
 
 ## Description 
 
-
+This application allows users to create, delete, and edit their users thoughts and reactions. Users will be able to manage their users through Insomina, the walkthrough videos below demonstrates how they will use it. 
 
 ## Screenshot
 
